@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetroitLionsTrackerApi", "DetroitLionsTrackerApi\DetroitLionsTrackerApi.csproj", "{9815680A-9A86-4FD2-95E1-D5D252762D06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DetroitLionsTrackerApi", "DetroitLionsTrackerApi\DetroitLionsTrackerApi.csproj", "{9815680A-9A86-4FD2-95E1-D5D252762D06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetroitLionsTrackerApi.DataLayer", "DetroitLionsTrackerApi.DataLayer\DetroitLionsTrackerApi.DataLayer.csproj", "{1339935B-654B-49DF-86F7-CABD48A36310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetroitLionsTrackerApi.DataLayer.Interfaces", "DetroitLionsTrackerApi.DataLayer.Interfaces\DetroitLionsTrackerApi.DataLayer.Interfaces.csproj", "{A55203FF-9751-4ED6-8227-56125982ECD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetroitLionsTrackerApi.BusinessLayer", "DetroitLionsTrackerApi.BusinessLayer\DetroitLionsTrackerApi.BusinessLayer.csproj", "{D6AF539D-02F7-48E8-8045-B1B888449BA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetroitLionsTrackerApi.BusinessLayer.Interfaces", "DetroitLionsTrackerApi.BusinessLayer.Interfaces\DetroitLionsTrackerApi.BusinessLayer.Interfaces.csproj", "{916106B0-1922-4993-BAF7-FB1CECBFC792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetroitLionsTrackerApi.Config", "DetroitLionsTrackerApi.Config\DetroitLionsTrackerApi.Config.csproj", "{D31570AA-6396-40C7-A26F-3D2BDDFD1148}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetroitLionsTrackerApi.Models", "DetroitLionsTrackerApi.Models\DetroitLionsTrackerApi.Models.csproj", "{C8C3D8A0-9817-48C9-82C8-7C048FEAC92E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,30 @@ Global
 		{9815680A-9A86-4FD2-95E1-D5D252762D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9815680A-9A86-4FD2-95E1-D5D252762D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9815680A-9A86-4FD2-95E1-D5D252762D06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1339935B-654B-49DF-86F7-CABD48A36310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1339935B-654B-49DF-86F7-CABD48A36310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1339935B-654B-49DF-86F7-CABD48A36310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1339935B-654B-49DF-86F7-CABD48A36310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A55203FF-9751-4ED6-8227-56125982ECD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A55203FF-9751-4ED6-8227-56125982ECD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A55203FF-9751-4ED6-8227-56125982ECD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A55203FF-9751-4ED6-8227-56125982ECD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6AF539D-02F7-48E8-8045-B1B888449BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6AF539D-02F7-48E8-8045-B1B888449BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6AF539D-02F7-48E8-8045-B1B888449BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6AF539D-02F7-48E8-8045-B1B888449BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{916106B0-1922-4993-BAF7-FB1CECBFC792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916106B0-1922-4993-BAF7-FB1CECBFC792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916106B0-1922-4993-BAF7-FB1CECBFC792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916106B0-1922-4993-BAF7-FB1CECBFC792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D31570AA-6396-40C7-A26F-3D2BDDFD1148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D31570AA-6396-40C7-A26F-3D2BDDFD1148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D31570AA-6396-40C7-A26F-3D2BDDFD1148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D31570AA-6396-40C7-A26F-3D2BDDFD1148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C3D8A0-9817-48C9-82C8-7C048FEAC92E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C3D8A0-9817-48C9-82C8-7C048FEAC92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C3D8A0-9817-48C9-82C8-7C048FEAC92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C3D8A0-9817-48C9-82C8-7C048FEAC92E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
