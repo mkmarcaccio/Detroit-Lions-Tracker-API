@@ -10,13 +10,10 @@ namespace DetroitLionsTrackerApi.Models.Entity
     public record SeasonPlayers
     {
         [Key]
-        [Column("SeasonPlayersId")]
         public long SeasonPlayersId { get; init; }
 
-        [Column("SeasonId")]
         public long SeasonId { get; init; }
 
-        [Column("PlayerId")]
         public long PlayerId { get; init; }
 
         public Season Season { get; set; }
