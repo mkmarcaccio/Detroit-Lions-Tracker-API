@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DetroitLionsTrackerApi.BusinessLayer\DetroitLionsTrackerApi.BusinessLayer.csproj" />
     <ProjectReference Include="..\DetroitLionsTrackerApi.Config\DetroitLionsTrackerApi.Config.csproj" />
     <ProjectReference Include="..\DetroitLionsTrackerApi.DataLayer\DetroitLionsTrackerApi.DataLayer.csproj" />
   </ItemGroup>

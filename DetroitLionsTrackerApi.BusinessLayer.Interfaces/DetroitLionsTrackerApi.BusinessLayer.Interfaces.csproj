@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DetroitLionsTrackerApi.Models\DetroitLionsTrackerApi.Models.csproj" />
+  </ItemGroup>
+
 </Project>
