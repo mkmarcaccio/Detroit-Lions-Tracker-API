@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DetroitLionsTrackerApi.DataLayer.Interfaces\DetroitLionsTrackerApi.DataLayer.Interfaces.csproj" />
     <ProjectReference Include="..\DetroitLionsTrackerApi.Models\DetroitLionsTrackerApi.Models.csproj" />
   </ItemGroup>
 
