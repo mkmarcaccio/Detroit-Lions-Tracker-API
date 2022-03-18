@@ -24,6 +24,7 @@ namespace DetroitLionsTrackerApi.DataLayer
                 GameId = gameRequest.GameId,
                 SeasonId = gameRequest.SeasonId,
                 Opponent = gameRequest.Opponent,
+                Date = gameRequest.Date,
                 Outcome = (Outcome)gameRequest.Outcome,
 
             };
@@ -50,6 +51,7 @@ namespace DetroitLionsTrackerApi.DataLayer
                 GameId = gameRequest.GameId,
                 SeasonId = gameRequest.SeasonId,
                 Opponent = gameRequest.Opponent,
+                Date = gameRequest.Date,
                 Outcome = (Outcome)gameRequest.Outcome,
             });
 
@@ -64,8 +66,9 @@ namespace DetroitLionsTrackerApi.DataLayer
                 .Where(g => filters.GameId == null || g.GameId == filters.GameId)
                 .Where(g => filters.SeasonId == null || g.SeasonId == filters.SeasonId)
                 .Where(g => filters.Opponent == null || g.Opponent == filters.Opponent)
+                .Where(g => filters.Date == null || g.Date == filters.Date)
                 .Where(g => filters.Outcome == null || g.Outcome == (Outcome)filters.Outcome)
-                .OrderByDescending(g => g.GameId)
+                .OrderByDescending(g => g.Date)
                 .AsAsyncEnumerable();
         }
 

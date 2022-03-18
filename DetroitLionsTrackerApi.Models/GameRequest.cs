@@ -11,6 +11,7 @@ namespace DetroitLionsTrackerApi.Models
         [Required]
         public long SeasonId { get; init; }
         public string Opponent { get; init; }
+        public DateTime Date { get; init; }
         public GameOutcome Outcome { get; init; }
     }
 }
