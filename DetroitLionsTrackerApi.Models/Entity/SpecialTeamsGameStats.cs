@@ -9,9 +9,6 @@ namespace DetroitLionsTrackerApi.Models.Entity
     [ExcludeFromCodeCoverage]
     public record SpecialTeamsGameStats
     {
-        [Key]
-        public long SpecialTeamsGameStatsId { get; init; }
-
         public long GameId { get; init; }
 
         public long PlayerId { get; init; }
