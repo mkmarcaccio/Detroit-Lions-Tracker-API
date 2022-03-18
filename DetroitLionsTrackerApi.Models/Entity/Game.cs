@@ -16,6 +16,8 @@ namespace DetroitLionsTrackerApi.Models.Entity
 
         public string Opponent { get; init; }
 
+        public DateTime Date { get; init; }
+
         public Outcome Outcome { get; init; }
 
         public virtual Season Season { get; set; }

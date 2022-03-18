@@ -70,7 +70,7 @@ namespace DetroitLionsTrackerApi.DataLayer.Context
             // OffensiveGameStats Table Objects
             modelBuilder.Entity<OffensiveGameStats>()
                 .ToTable("OffensiveGameStats")
-                .HasKey(offensiveGameStats => offensiveGameStats.OffensiveGameStatsId);
+                .HasKey(offensiveGameStats => new { offensiveGameStats.GameId, offensiveGameStats.PlayerId});
 
             modelBuilder.Entity<OffensiveGameStats>()
                 .HasOne(offensiveGameStats => offensiveGameStats.Game)
@@ -85,7 +85,7 @@ namespace DetroitLionsTrackerApi.DataLayer.Context
             // DefensiveGameStats Table Objects
             modelBuilder.Entity<DefensiveGameStats>()
                 .ToTable("DefensiveGameStats")
-                .HasKey(defensiveGameStats => defensiveGameStats.DefensiveGameStatsId);
+                .HasKey(defensiveGameStats => new { defensiveGameStats.GameId, defensiveGameStats.PlayerId });
 
             modelBuilder.Entity<DefensiveGameStats>()
                 .HasOne(defensiveGameStats => defensiveGameStats.Game)
@@ -100,7 +100,7 @@ namespace DetroitLionsTrackerApi.DataLayer.Context
             // SpecialTeamsGameStats Table Objects
             modelBuilder.Entity<SpecialTeamsGameStats>()
                 .ToTable("SpecialTeamsGameStats")
-                .HasKey(specialTeamsGameStats => specialTeamsGameStats.SpecialTeamsGameStatsId);
+                .HasKey(specialTeamsGameStats => new { specialTeamsGameStats.GameId, specialTeamsGameStats.PlayerId });
 
             modelBuilder.Entity<SpecialTeamsGameStats>()
                 .HasOne(specialTeamsGameStats => specialTeamsGameStats.Game)
