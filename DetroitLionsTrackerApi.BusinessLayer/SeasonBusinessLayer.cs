@@ -2,11 +2,6 @@
 using DetroitLionsTrackerApi.DataLayer.Interfaces;
 using DetroitLionsTrackerApi.Models;
 using DetroitLionsTrackerApi.Models.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DetroitLionsTrackerApi.BusinessLayer
 {

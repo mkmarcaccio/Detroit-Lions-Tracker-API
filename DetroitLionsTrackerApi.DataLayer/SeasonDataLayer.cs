@@ -3,9 +3,11 @@ using DetroitLionsTrackerApi.DataLayer.Interfaces;
 using DetroitLionsTrackerApi.Models;
 using DetroitLionsTrackerApi.Models.Entity;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DetroitLionsTrackerApi.DataLayer
 {
+    [ExcludeFromCodeCoverage]
     public class SeasonDataLayer : ISeasonDataLayer
     {
         private readonly DetroitLionsTrackerDbContext _context;
@@ -35,7 +37,7 @@ namespace DetroitLionsTrackerApi.DataLayer
         {
             var season = await _context.Seasons
                 .AsNoTracking()
-                .SingleOrDefaultAsync(p => p.SeasonId.Equals(seasonId));
+                .SingleOrDefaultAsync(s => s.SeasonId.Equals(seasonId));
 
             if (season == null)
             {
@@ -60,7 +62,7 @@ namespace DetroitLionsTrackerApi.DataLayer
                 .Where(s => filters.SeasonId == null || s.SeasonId == filters.SeasonId)
                 .Where(s => filters.Year == null || s.Year == filters.Year)
                 .Where(s => filters.Record == null || s.Record.Contains(filters.Record))
-                .OrderByDescending(p => p.Year)
+                .OrderByDescending(s => s.Year)
                 .AsAsyncEnumerable();
         }
 
