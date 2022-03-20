@@ -8,10 +8,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DetroitLionsTrackerApi.DataLayer.Migrations
+namespace DetroitLionsTrackerApi.Migrations
 {
     [DbContext(typeof(DetroitLionsTrackerDbContext))]
-    [Migration("20220318184142_InitialMigration")]
+    [Migration("20220320022423_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,8 +79,9 @@ namespace DetroitLionsTrackerApi.DataLayer.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Outcome")
-                        .HasColumnType("int");
+                    b.Property<string>("Outcome")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<long>("SeasonId")
                         .HasColumnType("bigint");

@@ -67,6 +67,11 @@ namespace DetroitLionsTrackerApi.DataLayer.Context
                 .WithMany(season => season.Games)
                 .HasForeignKey(game => game.SeasonId);
 
+            modelBuilder.Entity<Game>()
+                .Property(g => g.Outcome)
+                .HasConversion(x => x.ToString(), // to converter
+                x => (Outcome)Enum.Parse(typeof(Outcome), x));
+
             // OffensiveGameStats Table Objects
             modelBuilder.Entity<OffensiveGameStats>()
                 .ToTable("OffensiveGameStats")
