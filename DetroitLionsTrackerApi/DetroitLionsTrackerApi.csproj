@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -29,9 +29,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DetroitLionsTrackerApi.BusinessLayer\DetroitLionsTrackerApi.BusinessLayer.csproj" />
-    <ProjectReference Include="..\DetroitLionsTrackerApi.Config\DetroitLionsTrackerApi.Config.csproj" />
-    <ProjectReference Include="..\DetroitLionsTrackerApi.DataLayer\DetroitLionsTrackerApi.DataLayer.csproj" />
+    <Folder Include="BusinessLayers\" />
+    <Folder Include="DataLayers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Config\" />
   </ItemGroup>
 
 </Project>
