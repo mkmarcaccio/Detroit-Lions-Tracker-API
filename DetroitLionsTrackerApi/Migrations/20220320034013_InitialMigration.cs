@@ -25,7 +25,8 @@ namespace DetroitLionsTrackerApi.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Position = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Unit = table.Column<int>(type: "int", nullable: false),
+                    Unit = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     JerseyNumber = table.Column<int>(type: "int", nullable: false),
                     DepthChartOrder = table.Column<int>(type: "int", nullable: false),
                     IsOnRoster = table.Column<bool>(type: "tinyint(1)", nullable: false)

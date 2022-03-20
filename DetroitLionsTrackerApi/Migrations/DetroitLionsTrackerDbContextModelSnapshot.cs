@@ -172,8 +172,9 @@ namespace DetroitLionsTrackerApi.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Unit")
-                        .HasColumnType("int");
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.HasKey("PlayerId");
 
