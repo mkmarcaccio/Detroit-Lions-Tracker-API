@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DetroitLionsTrackerApi.DataLayer.Migrations
+namespace DetroitLionsTrackerApi.Migrations
 {
     public partial class InitialMigration : Migration
     {
@@ -62,7 +62,8 @@ namespace DetroitLionsTrackerApi.DataLayer.Migrations
                     Opponent = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Date = table.Column<DateTime>(type: "datetime", nullable: false),
-                    Outcome = table.Column<int>(type: "int", nullable: false)
+                    Outcome = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {

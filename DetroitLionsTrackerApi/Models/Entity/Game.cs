@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.CodeAnalysis;
+using System.Text.Json.Serialization;
 
 namespace DetroitLionsTrackerApi.Models.Entity
 {
@@ -29,6 +30,7 @@ namespace DetroitLionsTrackerApi.Models.Entity
         public virtual ICollection<SpecialTeamsGameStats> SpecialTeamsGameStats { get; init; }
     }
 
+    [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum Outcome
     {
         Win,

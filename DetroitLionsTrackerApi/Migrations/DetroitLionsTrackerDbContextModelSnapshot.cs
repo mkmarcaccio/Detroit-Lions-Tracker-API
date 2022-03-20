@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DetroitLionsTrackerApi.DataLayer.Migrations
+namespace DetroitLionsTrackerApi.Migrations
 {
     [DbContext(typeof(DetroitLionsTrackerDbContext))]
     partial class DetroitLionsTrackerDbContextModelSnapshot : ModelSnapshot
@@ -77,8 +77,9 @@ namespace DetroitLionsTrackerApi.DataLayer.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Outcome")
-                        .HasColumnType("int");
+                    b.Property<string>("Outcome")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<long>("SeasonId")
                         .HasColumnType("bigint");
