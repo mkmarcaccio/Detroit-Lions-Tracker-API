@@ -28,10 +28,17 @@
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <ProjectReference Include="..\DetroitLionsTrackerApi.BusinessLayer\DetroitLionsTrackerApi.BusinessLayer.csproj" />
     <ProjectReference Include="..\DetroitLionsTrackerApi.Config\DetroitLionsTrackerApi.Config.csproj" />
     <ProjectReference Include="..\DetroitLionsTrackerApi.DataLayer\DetroitLionsTrackerApi.DataLayer.csproj" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <Folder Include="BusinessLayers\" />
+    <Folder Include="DataLayers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Config\" />
   </ItemGroup>
 
 </Project>
