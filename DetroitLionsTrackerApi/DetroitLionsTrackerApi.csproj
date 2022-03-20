@@ -29,9 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="BusinessLayers\" />
-    <Folder Include="DataLayers\" />
-    <Folder Include="Models\" />
     <Folder Include="Config\" />
   </ItemGroup>
 

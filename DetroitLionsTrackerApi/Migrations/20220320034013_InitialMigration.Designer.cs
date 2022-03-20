@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DetroitLionsTrackerApi.Migrations
 {
     [DbContext(typeof(DetroitLionsTrackerDbContext))]
-    [Migration("20220320022423_InitialMigration")]
+    [Migration("20220320034013_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -174,8 +174,9 @@ namespace DetroitLionsTrackerApi.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Unit")
-                        .HasColumnType("int");
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.HasKey("PlayerId");
 

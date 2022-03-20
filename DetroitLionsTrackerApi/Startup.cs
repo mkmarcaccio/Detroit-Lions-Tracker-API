@@ -1,9 +1,13 @@
 ﻿using DetroitLionsTrackerApi.BusinessLayer;
 using DetroitLionsTrackerApi.BusinessLayer.Interfaces;
+using DetroitLionsTrackerApi.BusinessLayers;
+using DetroitLionsTrackerApi.BusinessLayers.Interfaces;
 using DetroitLionsTrackerApi.Config;
 using DetroitLionsTrackerApi.DataLayer;
 using DetroitLionsTrackerApi.DataLayer.Context;
 using DetroitLionsTrackerApi.DataLayer.Interfaces;
+using DetroitLionsTrackerApi.DataLayers;
+using DetroitLionsTrackerApi.DataLayers.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
@@ -47,6 +51,8 @@ namespace DetroitLionsTrackerApi
             services.AddTransient<ISeasonDataLayer, SeasonDataLayer>();
             services.AddTransient<IGameBusinessLayer, GameBusinessLayer>();
             services.AddTransient<IGameDataLayer, GameDataLayer>();
+            services.AddTransient<IPlayerBusinessLayer, PlayerBusinessLayer>();
+            services.AddTransient<IPlayerDataLayer, PlayerDataLayer>();
 
             var connectionStrings = new ConnectionStrings();
             Configuration.GetSection(nameof(ConnectionStrings)).Bind(connectionStrings);

@@ -42,6 +42,11 @@ namespace DetroitLionsTrackerApi.DataLayer.Context
                 .ToTable("Player")
                 .HasKey(player => player.PlayerId);
 
+            modelBuilder.Entity<Player>()
+                .Property(p => p.Unit)
+                .HasConversion(x => x.ToString(), // to converter
+                x => (Unit)Enum.Parse(typeof(Unit), x));
+
             // SeasonPlayers Table Objects
             modelBuilder.Entity<SeasonPlayers>()
                 .ToTable("SeasonPlayers")
