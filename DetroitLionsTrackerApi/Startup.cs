@@ -53,6 +53,8 @@ namespace DetroitLionsTrackerApi
             services.AddTransient<IGameDataLayer, GameDataLayer>();
             services.AddTransient<IPlayerBusinessLayer, PlayerBusinessLayer>();
             services.AddTransient<IPlayerDataLayer, PlayerDataLayer>();
+            services.AddTransient<ISeasonPlayersBusinessLayer, SeasonPlayersBusinessLayer>();
+            services.AddTransient<ISeasonPlayersDataLayer, SeasonPlayersDataLayer>();
 
             var connectionStrings = new ConnectionStrings();
             Configuration.GetSection(nameof(ConnectionStrings)).Bind(connectionStrings);
