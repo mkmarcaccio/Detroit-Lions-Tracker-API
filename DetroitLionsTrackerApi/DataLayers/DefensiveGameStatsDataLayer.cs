@@ -103,7 +103,7 @@ namespace DetroitLionsTrackerApi.DataLayers
         {
             var defensiveGameStats = await _context.DefensiveGameStats
                 .AsNoTracking()
-                .FirstOrDefaultAsync(o => o.GameId == gameId && o.PlayerId == playerId);
+                .FirstOrDefaultAsync(d => d.GameId == gameId && d.PlayerId == playerId);
 
             if (defensiveGameStats == null)
             {
