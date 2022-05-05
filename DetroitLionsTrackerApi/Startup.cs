@@ -34,6 +34,7 @@ namespace DetroitLionsTrackerApi
         {
             services
                 .AddOptions()
+                .AddCors()
                 .AddResponseCompression()
                 .Configure<ConnectionStrings>(Configuration.GetSection(nameof(ConnectionStrings)))
                 .AddControllers()
@@ -97,6 +98,9 @@ namespace DetroitLionsTrackerApi
             });
 
             app.UseHttpsRedirection();
+
+            app.UseCors(policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithExposedHeaders("x-total-count", "x-content-length", "x-new-count", "x-completed-count", "x-failed-count"))
+               .UseResponseCompression();
 
             app.UseRouting();
 
