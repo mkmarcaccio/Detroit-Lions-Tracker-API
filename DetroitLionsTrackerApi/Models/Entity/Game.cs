@@ -21,6 +21,8 @@ namespace DetroitLionsTrackerApi.Models.Entity
 
         public Outcome Outcome { get; init; }
 
+        public string Score { get; init; }
+
         public virtual Season Season { get; set; }
 
         public virtual ICollection<OffensiveGameStats> OffensiveGameStats { get; init; }
