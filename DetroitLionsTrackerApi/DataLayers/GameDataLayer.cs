@@ -26,6 +26,7 @@ namespace DetroitLionsTrackerApi.DataLayer
                 Opponent = gameRequest.Opponent,
                 Date = gameRequest.Date,
                 Outcome = (Outcome)gameRequest.Outcome,
+                Score = gameRequest.Score,
 
             };
             var gameEntry = _context.Games.Add(game);
@@ -53,6 +54,7 @@ namespace DetroitLionsTrackerApi.DataLayer
                 Opponent = gameRequest.Opponent,
                 Date = gameRequest.Date,
                 Outcome = (Outcome)gameRequest.Outcome,
+                Score = gameRequest.Score,
             });
 
             await _context.SaveChangesAsync();
@@ -68,6 +70,7 @@ namespace DetroitLionsTrackerApi.DataLayer
                 .Where(g => filters.Opponent == null || g.Opponent == filters.Opponent)
                 .Where(g => filters.Date == null || g.Date == filters.Date)
                 .Where(g => filters.Outcome == null || g.Outcome == (Outcome)filters.Outcome)
+                .Where(g => filters.Score == null || g.Score == filters.Score)
                 .OrderByDescending(g => g.Date)
                 .AsAsyncEnumerable();
         }
