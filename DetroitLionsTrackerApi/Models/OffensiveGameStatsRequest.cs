@@ -21,6 +21,7 @@ namespace DetroitLionsTrackerApi.Models
         public int Fumbles { get; init; }
         public int Receptions { get; init; }
         public int ReceivingYards { get; init; }
+        public int ReceivingTouchdowns { get; init; }
         public int Targets { get; init; }
         public int Drops { get; init; }
     }

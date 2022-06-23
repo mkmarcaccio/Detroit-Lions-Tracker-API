@@ -32,6 +32,7 @@ namespace DetroitLionsTrackerApi.DataLayers
                 Fumbles = offensiveGameStatsRequest.Fumbles,
                 Receptions = offensiveGameStatsRequest.Receptions,
                 ReceivingYards = offensiveGameStatsRequest.ReceivingYards,
+                ReceivingTouchdowns = offensiveGameStatsRequest.ReceivingTouchdowns,
                 Targets = offensiveGameStatsRequest.Targets,
                 Drops = offensiveGameStatsRequest.Drops,
 
@@ -69,6 +70,7 @@ namespace DetroitLionsTrackerApi.DataLayers
                 Fumbles = offensiveGameStatsRequest.Fumbles,
                 Receptions = offensiveGameStatsRequest.Receptions,
                 ReceivingYards = offensiveGameStatsRequest.ReceivingYards,
+                ReceivingTouchdowns = offensiveGameStatsRequest.ReceivingTouchdowns,
                 Targets = offensiveGameStatsRequest.Targets,
                 Drops = offensiveGameStatsRequest.Drops,
             });
@@ -94,9 +96,12 @@ namespace DetroitLionsTrackerApi.DataLayers
                 .Where(o => filters.Fumbles == null || o.Fumbles == filters.Fumbles)
                 .Where(o => filters.Receptions == null || o.Receptions == filters.Receptions)
                 .Where(o => filters.ReceivingYards == null || o.ReceivingYards == filters.ReceivingYards)
+                .Where(o => filters.ReceivingTouchdowns == null || o.ReceivingTouchdowns == filters.ReceivingTouchdowns)
                 .Where(o => filters.Targets == null || o.Targets == filters.Targets)
                 .Where(o => filters.Drops == null || o.Drops == filters.Drops)
                 .OrderByDescending(o => o.GameId)
+                .Include(o => o.Player)
+                .Include(o => o.Game)
                 .AsAsyncEnumerable();
         }
 
