@@ -48,7 +48,9 @@ namespace DetroitLionsTrackerApi.DataLayers
         {
             var offensiveGameStats = await _context.OffensiveGameStats
                 .AsNoTracking()
+                .Include(o => o.Player)
                 .SingleOrDefaultAsync(o => o.GameId.Equals(gameId) && o.PlayerId.Equals(playerId));
+                
 
             if (offensiveGameStats == null)
             {
@@ -76,6 +78,10 @@ namespace DetroitLionsTrackerApi.DataLayers
             });
 
             await _context.SaveChangesAsync();
+            //return GetOffensiveGameStatsByFilter(new OffensiveGameStatsFilterParameters
+            //{
+            //    PlayerId = offensiveGameStatsRequest.PlayerId
+            //});
 
             return offensiveGameStatsEntry.Entity;
         }
