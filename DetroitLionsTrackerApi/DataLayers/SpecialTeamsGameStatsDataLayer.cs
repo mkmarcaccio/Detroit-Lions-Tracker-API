@@ -90,6 +90,8 @@ namespace DetroitLionsTrackerApi.DataLayers
                 .Where(s => filters.PuntReturnYards == null || s.PuntReturnYards == filters.PuntReturnYards)
                 .Where(s => filters.Touchdowns == null || s.Touchdowns == filters.Touchdowns)
                 .OrderByDescending(s => s.GameId)
+                .Include(s => s.Player)
+                .Include(s => s.Game)
                 .AsAsyncEnumerable();
         }
 
